@@ -19,7 +19,14 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('availableLocallyCtrl', function($scope) {
+.controller('availableLocallyCtrl', function($scope, dataService) {
+
+	dataService.getLocalBeer(function(response) {
+		$scope.localBeer = response.data.availableLocalBeer;
+		console.log("local tick tock");
+//		console.log($scope.ratedBeer);
+	});
+
 
 })
    

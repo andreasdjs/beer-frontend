@@ -1,0 +1,22 @@
+<ion-view title="Available Online" id="page4" class=" ">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="availableOnline-list4" class=" ">
+
+<!--
+            <ion-item class="item-icon-left  " id="availableOnline-list-item14" ui-sref="tabsController.showItem">
+                <i class="icon ion-beer"></i>Westmalle</ion-item>
+            <ion-item class="item-icon-left  " id="availableOnline-list-item15" ui-sref="tabsController.showItem">
+                <i class="icon ion-beer"></i>Item</ion-item>
+            <ion-item class="item-icon-left  " id="availableOnline-list-item16" ui-sref="tabsController.showItem">
+                <i class="icon ion-beer"></i>Item</ion-item>
+            <ion-item class="item-icon-left  " id="availableOnline-list-item17" ui-sref="tabsController.showItem">
+                <i class="icon ion-beer"></i>Item</ion-item>
+            <ion-item class="item-icon-left  " id="availableOnline-list-item18" ui-sref="tabsController.showItem">
+                <i class="icon ion-beer"></i>Item</ion-item>
+-->
+            <ion-item class="item-icon-left energized  " id="topList-list-item24" ui-sref="tabsController.showItem" ng-repeat="beer in systembolagetMatchedBeer track by $index" >
+                <i class="icon ion-beer"></i>{{ beer.name }} {{ beer.brewery }} {{ beer.rating }}</ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

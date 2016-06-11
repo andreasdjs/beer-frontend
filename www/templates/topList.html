@@ -1,38 +1,8 @@
 <ion-view title="Top List" id="page5" class=" ">
     <ion-content padding="true" class="has-header">
         <ion-list id="topList-list5" class=" ">
-<!--
-            <ion-item class="item-icon-left energized  " id="topList-list-item20" ui-sref="tabsController.showItem">
-                <i class="icon ion-beer"></i>Teen Fidy - Oskar Blues Brewery</ion-item>
-                -->
-<!--
-            <ion-item class="item-icon-left  " id="topList-list-item21" ui-sref="tabsController.showItem">
-                <i class="icon ion-ios-pint"></i>Item</ion-item>
-            <ion-item class="item-icon-left  " id="topList-list-item22" ui-sref="tabsController.showItem">
-                <i class="icon ion-ios-pint-outline"></i>Item</ion-item>
-            <ion-item class="item-icon-left positive  " id="topList-list-item23" ui-sref="tabsController.showItem">
-                <i class="icon ion-beaker"></i>Item</ion-item>
-            <ion-item class="item-icon-left balanced  " id="topList-list-item24" ui-sref="tabsController.showItem">
-                <i class="icon ion-android-bar"></i>Item</ion-item>
-
--->
-<!--  -->
-
-
-
-            <ion-item class="item-icon-left energized  " id="topList-list-item24" ui-sref="tabsController.showItem" ng-repeat="beer in ratedBeer track by $index" ng-click="hellothere(beer)">
+            <ion-item class="item-icon-left energized  " id="topList-list-item24" ui-sref="tabsController.showItem" ng-repeat="beer in ratedBeer track by $index" ng-click="showBeer(beer)">
                 <i class="icon ion-beer"></i>{{ beer.name }} {{ beer.brewery }} {{ beer.rating }}</ion-item>
-
-
-<!-- -->
-
         </ion-list>
-<!--
-            <div ng-repeat="beer in ratedBeer track by $index" class="user">
-                <span class="name"><b>{{ beer.name }}</b> {{ beer.brewery }} {{ beer.rating }}</span>
-            </div>          
--->
-
-
     </ion-content>
 </ion-view>

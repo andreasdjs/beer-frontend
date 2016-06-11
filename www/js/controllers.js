@@ -1,70 +1,58 @@
 angular.module('app.controllers', [])
   
-.controller('topListCtrl', function($scope, dataService, greeting) {
+.controller('topListCtrl', function($scope, dataService, sharedData) {
 
-	var first = this;
-	first.greeting = greeting;
-
-	console.log("first greeting: " + first.greeting.message);
+	var toplist = this;
+	toplist.sharedData = sharedData;
 
 	dataService.getRatedBeer(function(response) {
 		$scope.ratedBeer =  response.data.ratedBeer;
-		console.log("tick");
-//		console.log($scope.ratedBeer);
 	});
 
-
-	$scope.currentItem = {
-		"name" : "hello",
-		"brewery" : "yello"
-	};
-
-	$scope.hello = "tjenare";
-
-	$scope.hellothere = function(obj) {
-		console.log("Hello dear!");
-		first.greeting.message = "Hello dear";
-		first.greeting.object = obj;
+	$scope.showBeer = function(obj) {
+		toplist.sharedData.object = obj;
 		console.log(obj);
 	}
 })
    
-.controller('availableLocallyCtrl', function($scope, dataService) {
+.controller('availableLocallyCtrl', function($scope, dataService, sharedData) {
+
+	var local = this;
+	local.sharedData = sharedData;
 
 	dataService.getLocalBeer(function(response) {
 		$scope.localBeer = response.data.availableLocalBeer;
-		console.log("local tick tock");
-//		console.log($scope.ratedBeer);
 	});
 
+	$scope.showBeer = function(obj) {
+		local.sharedData.object = obj;
+		console.log(obj);
+	}
 
 })
    
-.controller('availableOnlineCtrl', function($scope, dataService) {
+.controller('availableOnlineCtrl', function($scope, dataService, sharedData) {
+
+	var online = this;
+	online.sharedData = sharedData;
 
 	dataService.getMatchedSystembolagetBeer(function(response) {
 		$scope.systembolagetMatchedBeer = response.data.systembolagetMatchedBeer;
-		console.log("tock");
-//		console.log($scope.ratedBeer);
 	});
 
-
+	$scope.showBeer = function(obj) {
+		online.sharedData.object = obj;
+		console.log(obj);
+	}
 
 })
       
-.controller('showItemCtrl', function($scope, greeting) {
+.controller('showItemCtrl', function($scope, sharedData) {
 
 	var second = this;
-	second.greeting = greeting;
+	second.sharedData = sharedData;
 
-	console.log("Second greeting: " + second.greeting.message);
-
-	$scope.hello = "tjenare";
-	$scope.yello = second.greeting.message;
-
-	$scope.beer = second.greeting.object;
-	console.log($scope.beer.name);
-	console.log($scope.beer.brewery);
+	$scope.beer = second.sharedData.object;
 
 })
  

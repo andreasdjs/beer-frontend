@@ -68,15 +68,20 @@ angular.module('app.routes', ['ionicUIRouter'])
         controller: 'showItemCtrl'
       },
       'tab2': {
-        templateUrl: 'templates/showItem.html',
+        templateUrl: 'templates/showLocalItem.html',
         controller: 'showItemCtrl'
       },
       'tab3': {
-        templateUrl: 'templates/showItem.html',
+        templateUrl: 'templates/showOnlineItem.html',
         controller: 'showItemCtrl'
       }
     }
   })
+/**/
+
+
+
+/**/  
 
 $urlRouterProvider.otherwise('/page1/page2')
 

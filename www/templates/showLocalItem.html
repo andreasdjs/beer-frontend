@@ -2,8 +2,17 @@
     <ion-content padding="true" class="has-header">
         <h3 id="showItem-heading1" class=" ">{{ beer.name }}</h3>
         <h5 id="showItem-heading3" class=" ">{{ beer.brewery }}</h5>
-        <div id="showItem-markdown1" class=" ">Alkoholhalt: {{ beer.beerAbv }}%</div>
-        <div>Rating: {{ beer.rating }} / 5</div>
+        <div class="rating">
+        	<div class="stars">
+        	<span class="star on"></span>
+		 	<span class="star on"></span>
+		 	<span class="star on"></span>
+		 	<span class="star half"></span>
+		 	<span class="star"></span>
+			</div>
+		</div>        
+        <div id="showItem-markdown1" class="darkness ">Alkoholhalt: {{ beer.beerAbv }}%</div>
+        <div class="darkness">Rating: {{ beer.rating }} / 5</div>
         <div class="spacer" style="height: 100px;"></div>
     </ion-content>
 </ion-view>

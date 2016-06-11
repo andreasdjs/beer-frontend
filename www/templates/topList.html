@@ -20,7 +20,7 @@
 
 
 
-            <ion-item class="item-icon-left energized  " id="topList-list-item24" ui-sref="tabsController.showItem" ng-repeat="beer in ratedBeer track by $index">
+            <ion-item class="item-icon-left energized  " id="topList-list-item24" ui-sref="tabsController.showItem" ng-repeat="beer in ratedBeer track by $index" ng-click="hellothere(beer)">
                 <i class="icon ion-beer"></i>{{ beer.name }} {{ beer.brewery }} {{ beer.rating }}</ion-item>
 
 

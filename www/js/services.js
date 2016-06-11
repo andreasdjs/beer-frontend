@@ -31,8 +31,19 @@ angular.module('app.services', [])
     $http.get('http://localhost\:3000/api/ratedBeer').then(cb);
   };
 
+})
+
+.service('greeting', function Greeting(){
+	var greeting = this;
+
+	greeting.message = "Default";
+	/*
+  this.getRatedBeer = function(cb) {
+    $http.get('http://localhost\:3000/api/ratedBeer').then(cb);
+  };*/
 
 });
+
 
 /*
 .service('dataService', [function($http){
@@ -41,7 +52,7 @@ angular.module('app.services', [])
   this.getRatedBeer = function(cb) {
     $http.get('http://localhost\:3000/api/ratedBeer').then(cb);
   };
-
+/*
 
 }]);
 

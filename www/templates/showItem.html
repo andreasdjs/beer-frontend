@@ -1,14 +1,9 @@
 <ion-view title="Show item" id="page6" class=" ">
     <ion-content padding="true" class="has-header">
 
-	    {{ hello }}
-
-
-        <h3 id="showItem-heading1" style="color:#000000;" class=" ">Ten Fidy</h3>
-        <h5 id="showItem-heading3" style="color:#000000;" class=" ">Oscar Blues Brewery</h5>
-        <p id="showItem-markdown1" style="color:#000000;" class=" ">Systembolaget ID:
-            <strong>123412341234</strong>
-            10 st tillgängliga på Karl Johansgata 123.</p>
+        <h3 id="showItem-heading1" class=" ">{{ beer.name }}</h3>
+        <h5 id="showItem-heading3" class=" ">{{ beer.brewery }}</h5>
+        <div id="showItem-markdown1" class=" ">Alkoholhalt: {{ beer.beerAbv }}%</div>
         <div class="spacer" style="height: 100px;"></div>
     </ion-content>
 </ion-view>

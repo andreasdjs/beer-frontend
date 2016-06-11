@@ -1,6 +1,11 @@
 angular.module('app.controllers', [])
   
-.controller('topListCtrl', function($scope, dataService) {
+.controller('topListCtrl', function($scope, dataService, greeting) {
+
+	var first = this;
+	first.greeting = greeting;
+
+	console.log("first greeting: " + first.greeting.message);
 
 	dataService.getRatedBeer(function(response) {
 		$scope.ratedBeer =  response.data.ratedBeer;
@@ -16,7 +21,12 @@ angular.module('app.controllers', [])
 
 	$scope.hello = "tjenare";
 
-
+	$scope.hellothere = function(obj) {
+		console.log("Hello dear!");
+		first.greeting.message = "Hello dear";
+		first.greeting.object = obj;
+		console.log(obj);
+	}
 })
    
 .controller('availableLocallyCtrl', function($scope, dataService) {
@@ -42,11 +52,19 @@ angular.module('app.controllers', [])
 
 })
       
-.controller('showItemCtrl', function($scope) {
+.controller('showItemCtrl', function($scope, greeting) {
+
+	var second = this;
+	second.greeting = greeting;
+
+	console.log("Second greeting: " + second.greeting.message);
 
 	$scope.hello = "tjenare";
+	$scope.yello = second.greeting.message;
 
-
+	$scope.beer = second.greeting.object;
+	console.log($scope.beer.name);
+	console.log($scope.beer.brewery);
 
 })
  

@@ -54,5 +54,26 @@ angular.module('app.controllers', [])
 
 	$scope.beer = second.sharedData.object;
 
+/* stars */
+
+	$scope.stars = Math.floor($scope.beer.rating);
+	$scope.remaining = $scope.beer.rating - $scope.stars;
+	$scope.half = 0;
+	if ($scope.remaining == 0.5 || $scope.remaining == 0.25 || $scope.remaining == 0.75) {
+		$scope.half = 1;
+	}
+	$scope.unlit = 5 - Math.ceil($scope.beer.rating);
+//	console.log("Unlit: " + $scope.unlit)
+//	console.log($scope.remaining);
+	$scope.getNumber = function(num) {
+	    return new Array(num);   
+	}
+
+/* end stars */
+
+
 })
+
+
+
  

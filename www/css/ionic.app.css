@@ -9731,6 +9731,8 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+/************* Ratings *************/
+/***********************************/
 .star {
   font-size: x-large;
   width: 24px;
@@ -9754,9 +9756,27 @@ a.button {
   width: 12px;
   overflow: hidden; }
 
+.star.quarter:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -24px;
+  width: 8px;
+  overflow: hidden; }
+
+.star.threeQuarter:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -24px;
+  width: 16px;
+  overflow: hidden; }
+
 .rating {
   margin-bottom: 8px; }
 
+/***********************************/
+/***********************************/
 /******************************************************************/
 /*************************** COLORS *******************************/
 /******************************************************************/

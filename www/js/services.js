@@ -10,11 +10,11 @@ angular.module('app.services', [])
     $http.get('http://localhost\:3000/api/ratedMatchedBeerLocalStore').then(cb);
   };
 
-
+/* duplicate
   this.getMatchedSystembolagetBeer = function(cb) {
     $http.get('http://localhost\:3000/api/systembolagetMatchedBeer').then(cb);
   };
-
+*/
 
   this.getMatchedSystembolagetBeer = function(cb) {
     $http.get('http://localhost\:3000/api/systembolagetMatchedBeer').then(cb);

@@ -1,4 +1,4 @@
-<ion-view title="Show item" id="page6" class=" ">
+<ion-view title="" id="page6" class=" ">
     <ion-content padding="true" class="has-header">
         <h3 id="showItem-heading1" class=" ">{{ beer.name }}</h3>
         <h5 id="showItem-heading3" class=" ">{{ beer.brewery }}</h5>
@@ -9,6 +9,7 @@
 		</div>       
         <div id="showItem-markdown1" class="darkness ">Alkoholhalt: {{ beer.beerAbv }}%</div>
         <div class="darkness">Rating: {{ beer.rating }} / 5</div>
+        <div class="articleNumberListing">Varunummer: <span ng-repeat="id in beer.matchingIds track by $index" class="articleNumber">{{ id }}</span></div>
         <div class="spacer" style="height: 100px;"></div>
     </ion-content>
 </ion-view>

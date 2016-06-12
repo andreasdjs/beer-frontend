@@ -1,8 +1,13 @@
-<ion-view title="Available Locally" id="page3" class=" ">
+<ion-view title="Systembolaget: Karl Johansgatan" id="page3" class=" ">
     <ion-content padding="true" class="has-header">
         <ion-list id="availableLocally-list3" class=" ">
             <ion-item class="item-icon-left darkness  " id="topList-list-item24" ui-sref="tabsController.showItem" ng-repeat="beer in localBeer track by $index" ng-click="showBeer(beer)">
                 <i class="icon ion-beer"></i>{{ beer.name }} — {{ beer.brewery }}<!-- {{ beer.rating }}--></ion-item>
         </ion-list>
+		<div class="card">
+		  <div class="item item-text-wrap">
+		    Antal öl tillgängliga på Systembolaget Karl Johansgatan: <b>{{ localBeer.length }}</b> st.
+		  </div>
+		</div>
     </ion-content>
 </ion-view>

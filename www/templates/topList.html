@@ -1,8 +1,13 @@
-<ion-view title="Top List" id="page5" class=" ">
+<ion-view title="Topplista: Untappd" id="page5" class=" ">
     <ion-content padding="true" class="has-header">
         <ion-list id="topList-list5" class=" ">
             <ion-item class="item-icon-left darkness  " id="topList-list-item24" ui-sref="tabsController.showItem" ng-repeat="beer in ratedBeer track by $index" ng-click="showBeer(beer)">
                 <i class="icon ion-beer"></i>{{ beer.name }} — {{ beer.brewery }}<!-- {{ beer.rating }}--></ion-item>
         </ion-list>
+		<div class="card">
+		  <div class="item item-text-wrap">
+		    Antal öl med ett betyg över 2.5 / 5: <b>{{ ratedBeer.length }}</b> st.
+		  </div>
+		</div>
     </ion-content>
 </ion-view>

@@ -7,7 +7,7 @@ This is a school project to practive writing a hybrid app using Ionic and Angula
 
 ## Requirement
 
-To run the application a backend is needed, see separate github project: beer-bakend.
+To run the application a backend is needed, see separate github project: beer-backend.
 
 ## Story
 

@@ -12,20 +12,18 @@
 }
 
 .rating {
-
     margin-bottom:8px;
-
     .star {
         font-size: x-large;
         width: 24px;
         display: inline-block;
         color: $starUnlitColor;
-    }
-    .star:last-child {
-        margin-right: 0;
-    }
-    .star:before {
-        content:'\2605';
+        &:last-child {
+            margin-right: 0;
+        }
+        &:before {
+            content:'\2605';
+        }
     }
     .star.on {
         color: $starLitColor;

@@ -39,10 +39,10 @@ $backgroundColorContainer: #eeeeee;
     width: 24px;
     display: inline-block;
     color: #fff0a0; }
-  .rating .star:last-child {
-    margin-right: 0; }
-  .rating .star:before {
-    content: '\2605'; }
+    .rating .star:last-child {
+      margin-right: 0; }
+    .rating .star:before {
+      content: '\2605'; }
   .rating .star.on {
     color: gold; }
   .rating .star.half:after {

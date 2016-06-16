@@ -11,7 +11,7 @@ angular.module('app.controllers', [])
 
 	$scope.showBeer = function(obj) {
 		toplist.sharedData.object = obj;
-		console.log(obj);
+//		console.log(obj);
 	}
 })
    
@@ -26,7 +26,7 @@ angular.module('app.controllers', [])
 
 	$scope.showBeer = function(obj) {
 		local.sharedData.object = obj;
-		console.log(obj);
+//		console.log(obj);
 	}
 
 })
@@ -42,17 +42,17 @@ angular.module('app.controllers', [])
 
 	$scope.showBeer = function(obj) {
 		online.sharedData.object = obj;
-		console.log(obj);
+//		console.log(obj);
 	}
 
 })
       
 .controller('showItemCtrl', function($scope, sharedData) {
 
-	var second = this;
-	second.sharedData = sharedData;
+	var showItem = this;
+	showItem.sharedData = sharedData;
 
-	$scope.beer = second.sharedData.object;
+	$scope.beer = showItem.sharedData.object;
 
 /* stars */
 

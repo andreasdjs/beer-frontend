@@ -38,7 +38,6 @@ $backgroundColorContainer: #eeeeee;
     font-size: x-large;
     width: 24px;
     display: inline-block;
-    /*    color: #fff0a0; */
     color: #fff0a0; }
   .rating .star:last-child {
     margin-right: 0; }
@@ -50,23 +49,23 @@ $backgroundColorContainer: #eeeeee;
     content: '\2605';
     color: gold;
     position: absolute;
+    overflow: hidden;
     margin-left: -24px;
-    width: 12px;
-    overflow: hidden; }
+    width: 12px; }
   .rating .star.quarter:after {
     content: '\2605';
     color: gold;
     position: absolute;
+    overflow: hidden;
     margin-left: -24px;
-    width: 8px;
-    overflow: hidden; }
+    width: 8px; }
   .rating .star.threeQuarter:after {
     content: '\2605';
     color: gold;
     position: absolute;
+    overflow: hidden;
     margin-left: -24px;
-    width: 16px;
-    overflow: hidden; }
+    width: 16px; }
 
 /************ ArticleNr ************/
 /***********************************/
